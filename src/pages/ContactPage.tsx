@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, MessageSquare, Send, CheckCircle2, AlertCircle, Facebook, Twitter, Instagram, Youtube, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageSquare, Send, CheckCircle2, AlertCircle, Facebook, Twitter, Instagram, Youtube, Clock, ExternalLink, Compass } from 'lucide-react';
 import { stationConfig } from '../config/stationConfig';
 
 export const ContactPage: React.FC = () => {
@@ -159,12 +159,60 @@ export const ContactPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Map Location Placeholder Notice */}
-          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/5 text-xs text-text-muted space-y-1">
-            <span className="font-bold text-white uppercase block">Studio Map Verification</span>
-            <p>
-              Exact satellite map coordinates for physical studio studios in Rukiga District will be pinned here upon public unveiling.
+          {/* Verified Studio Location & Map Card */}
+          <div className="rounded-2xl bg-background-card border border-white/10 overflow-hidden shadow-xl space-y-3 p-5">
+            <div className="flex items-center justify-between">
+              <span className="font-bold text-white uppercase text-xs flex items-center gap-2">
+                <Compass size={16} className="text-brand-red" />
+                Physical Studio Location
+              </span>
+              <span className="text-[10px] font-bold uppercase tracking-wider bg-brand-gold/15 text-brand-gold border border-brand-gold/30 px-2 py-0.5 rounded">
+                Verified Address
+              </span>
+            </div>
+
+            <p className="text-xs text-text-secondary leading-relaxed">
+              <strong className="text-white block font-semibold mb-0.5">Muhanga Town Council, Rukiga District</strong>
+              Located strategically along the main <span className="text-brand-gold font-medium">Mbarara–Kabale Highway</span> in Western Uganda.
             </p>
+
+            {/* Embedded Interactive OpenStreetMap for Muhanga Town Council / Rukiga */}
+            <div className="relative rounded-xl overflow-hidden border border-white/10 aspect-video bg-neutral-900 shadow-inner">
+              <iframe
+                title="Muhanga Town Council, Rukiga District Map"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                scrolling="no"
+                marginHeight={0}
+                marginWidth={0}
+                src="https://www.openstreetmap.org/export/embed.html?bbox=30.0500%2C-1.2400%2C30.1200%2C-1.1900&amp;layer=mapnik&amp;marker=-1.2150%2C30.0850"
+                className="w-full h-full filter contrast-105"
+              />
+              <div className="absolute bottom-2 left-2 right-2 bg-black/80 backdrop-blur-md px-2.5 py-1.5 rounded-lg border border-white/10 flex items-center justify-between text-[11px] text-white">
+                <span className="truncate">📍 Muhanga, along Mbarara–Kabale Rd</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Muhanga+Town+Council+Rukiga+District+Uganda"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-gold hover:text-white font-bold ml-2 inline-flex items-center gap-1 shrink-0"
+                >
+                  <span>Google Maps</span>
+                  <ExternalLink size={10} />
+                </a>
+              </div>
+            </div>
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Muhanga+Town+Council+Rukiga+District+Uganda"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-white/5 hover:bg-brand-red text-white text-xs font-bold uppercase tracking-wider transition-colors border border-white/5"
+            >
+              <MapPin size={14} />
+              <span>Get Highway Directions</span>
+              <ExternalLink size={12} />
+            </a>
           </div>
         </div>
 

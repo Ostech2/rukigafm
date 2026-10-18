@@ -19,8 +19,8 @@ export const stationConfig: StationConfig = {
     whatsappNumber: '256700000000',
     whatsappFormatted: '+256 700 000 000',
     email: 'info@rukigafm.com',
-    studioAddress: 'Rukiga District, Western Region, Uganda [Official Studio Address TBC]',
-    region: 'Rukiga District & Western Uganda',
+    studioAddress: 'Muhanga Town Council, Rukiga District, along Mbarara–Kabale Road, Western Uganda',
+    region: 'Muhanga Town Council, Rukiga District, Kigezi, Western Uganda',
   },
   socialLinks: {
     facebook: 'https://facebook.com/rukigafm',

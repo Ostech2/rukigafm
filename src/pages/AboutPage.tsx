@@ -114,10 +114,10 @@ export const AboutPage: React.FC = () => {
           The EKICUNCU Identity & Regional Roots
         </h3>
         <p className="text-text-secondary text-sm leading-relaxed">
-          The name <span className="text-brand-gold font-bold">EKICUNCU</span> symbolizes warmth, gathering, and the central meeting place where news and companionship are shared. As RUKIGA FM prepares its full terrestrial and digital footprint, our commitment remains anchored in serving the terrace-farming communities, market traders, youth innovators, and elders who make this land so unique.
+          The name <span className="text-brand-gold font-bold">EKICUNCU</span> symbolizes warmth, gathering, and the central meeting place where news and companionship are shared. Broadcasting from <strong className="text-white">Muhanga Town Council, Rukiga District, along the bustling Mbarara–Kabale Highway</strong>, our commitment remains anchored in serving the terrace-farming communities, market traders, youth innovators, and families who make this scenic gateway of Kigezi so vibrant.
         </p>
         <div className="pt-2 text-xs text-text-muted italic border-t border-white/5">
-          * Factual milestones, exact broadcast transmitter coordinates, and license filings remain editable in the central configuration as station leadership confirms official launch updates.
+          * Studio Headquarters: Muhanga Town Council, Rukiga District, Western Uganda (along Mbarara–Kabale Road).
         </div>
       </div>
 
