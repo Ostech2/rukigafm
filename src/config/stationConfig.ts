@@ -3,7 +3,7 @@ import { StationConfig, Programme, Presenter, NewsArticle, PodcastEpisode, Poll 
 export const stationConfig: StationConfig = {
   stationName: 'RUKIGA FM',
   brandIdentity: 'EKICUNCU',
-  slogan: 'RUKIGA FM — EKICUNCU. Your Voice, Your Community.',
+  slogan: 'RUKIGA FM — EKICUNCU.',
   tagline: 'EKICUNCU — YOUR VOICE, YOUR COMMUNITY.',
   description:
     'Your destination for music, news, conversations, entertainment, sports, and the stories that bring our communities together. Tune in and be part of the experience.',
