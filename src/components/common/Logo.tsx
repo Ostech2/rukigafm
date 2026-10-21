@@ -65,7 +65,7 @@ export const Logo: React.FC<LogoProps> = ({ size = 'md', showSlogan = false, ima
             </span>
             {showSlogan && (
               <span className="hidden md:inline-block text-[11px] text-text-muted italic">
-                • Eiraka ryaitu, omwoyo gwaitu
+                • Your Voice, Your Community
               </span>
             )}
           </div>

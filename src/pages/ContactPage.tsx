@@ -147,32 +147,36 @@ export const ContactPage: React.FC = () => {
             {/* Social media links */}
             <div className="pt-4 border-t border-white/10 space-y-3">
               <span className="text-xs font-bold text-white uppercase tracking-wider block">
-                Connect On Social Media
+                Follow Us On Facebook & X: <span className="text-brand-gold">@rukigafm</span>
               </span>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-3">
                 <a
                   href={stationConfig.socialLinks.facebook}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-text-secondary hover:text-brand-red hover:bg-white/10 transition-colors"
-                  aria-label="Facebook"
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-blue-600/15 border border-blue-500/30 text-white hover:bg-blue-600 text-xs font-bold transition-all"
+                  aria-label="Facebook: @rukigafm"
                 >
-                  <Facebook size={18} />
+                  <Facebook size={16} className="text-blue-400" />
+                  <span>Facebook @rukigafm</span>
                 </a>
                 <a
-                  href={stationConfig.socialLinks.twitter}
+                  href={stationConfig.socialLinks.x}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-text-secondary hover:text-brand-red hover:bg-white/10 transition-colors"
-                  aria-label="Twitter"
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/10 border border-white/20 text-white hover:bg-white hover:text-black text-xs font-bold transition-all"
+                  aria-label="X: @rukigafm"
                 >
-                  <Twitter size={18} />
+                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                  <span>X @rukigafm</span>
                 </a>
                 <a
                   href={stationConfig.socialLinks.instagram}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-text-secondary hover:text-brand-red hover:bg-white/10 transition-colors"
+                  className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-text-secondary hover:text-pink-400 hover:bg-white/10 transition-colors"
                   aria-label="Instagram"
                 >
                   <Instagram size={18} />

@@ -1,6 +1,5 @@
 # RUKIGA FM — EKICUNCU | Official Radio Station Platform
 
-> “RUKIGA FM — EKICUNCU. Eiraka ryaitu, omwoyo gwaitu.”  
 > **Tagline:** EKICUNCU — YOUR VOICE, YOUR COMMUNITY.
 
 A modern, high-performance web broadcasting platform custom-built for **RUKIGA FM (EKICUNCU)** in Western Uganda. Designed to match international media house standards while preserving deep cultural connection to the Rukiga community.
@@ -11,7 +10,7 @@ A modern, high-performance web broadcasting platform custom-built for **RUKIGA F
 
 1. **Station Branding & Identity**
    - Distinctive broadcasting logo with animated sound waves & EKICUNCU emblem.
-   - Slogan: *“RUKIGA FM — EKICUNCU. Eiraka ryaitu, omwoyo gwaitu.”*
+   - Tagline: *“EKICUNCU — YOUR VOICE, YOUR COMMUNITY.”*
    - Color palette: `#0B0B0D` (Primary Dark), `#151519` (Secondary Charcoal), `#E5232E` (Brand Red), `#F5B82E` (Gold Accent).
 
 2. **Full-Width Hero Experience**
@@ -166,4 +165,4 @@ The repository is modularly structured to connect an administrator panel (e.g. N
 
 ---
 
-© RUKIGA FM — EKICUNCU. Eiraka ryaitu, omwoyo gwaitu.
+© RUKIGA FM — EKICUNCU. All rights reserved.

@@ -95,6 +95,7 @@ export interface StationConfig {
   socialLinks: {
     facebook: string;
     twitter: string;
+    x: string;
     instagram: string;
     tiktok: string;
     youtube: string;

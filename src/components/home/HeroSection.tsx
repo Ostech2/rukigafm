@@ -1,5 +1,5 @@
 import React from 'react';
-import { Play, Calendar, Radio, Sparkles, Volume2, ArrowRight, ExternalLink, Globe } from 'lucide-react';
+import { Play, Calendar, Radio, Sparkles, Volume2, ArrowRight, ExternalLink, Globe, Facebook } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { usePlayer } from '../../context/PlayerContext';
 import { stationConfig } from '../../config/stationConfig';
@@ -105,6 +105,31 @@ export const HeroSection: React.FC = () => {
             <Globe size={18} />
             <span>RUKIGAFM.COM</span>
             <ExternalLink size={16} />
+          </a>
+        </div>
+
+        {/* Social Follow Pill in Hero */}
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10 text-xs text-text-muted">
+          <span className="font-semibold text-white/70">Connect with us:</span>
+          <a
+            href={stationConfig.socialLinks.facebook}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-blue-600/20 text-white hover:text-blue-400 border border-white/10 transition-colors font-semibold"
+          >
+            <Facebook size={13} className="text-blue-400" />
+            <span>Facebook @rukigafm</span>
+          </a>
+          <a
+            href={stationConfig.socialLinks.x}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/15 text-white border border-white/10 transition-colors font-semibold"
+          >
+            <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            <span>X @rukigafm</span>
           </a>
         </div>
 

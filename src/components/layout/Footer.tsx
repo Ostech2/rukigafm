@@ -31,44 +31,54 @@ export const Footer: React.FC = () => {
               </p>
             </div>
 
-            {/* Social Links */}
-            <div className="flex items-center gap-3 pt-2">
-              <a
-                href={stationConfig.socialLinks.facebook}
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-text-secondary hover:text-brand-red hover:bg-white/10 hover:border-brand-red/40 transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook size={18} />
-              </a>
-              <a
-                href={stationConfig.socialLinks.twitter}
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-text-secondary hover:text-brand-red hover:bg-white/10 hover:border-brand-red/40 transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter size={18} />
-              </a>
-              <a
-                href={stationConfig.socialLinks.instagram}
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-text-secondary hover:text-brand-red hover:bg-white/10 hover:border-brand-red/40 transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={18} />
-              </a>
-              <a
-                href={stationConfig.socialLinks.youtube}
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-text-secondary hover:text-brand-red hover:bg-white/10 hover:border-brand-red/40 transition-colors"
-                aria-label="YouTube"
-              >
-                <Youtube size={18} />
-              </a>
+            {/* Follow Us On Facebook & X */}
+            <div className="space-y-2 pt-1">
+              <span className="text-xs font-bold text-white uppercase tracking-wider block">
+                Follow Us On Facebook & X: <span className="text-brand-gold">@rukigafm</span>
+              </span>
+              <div className="flex flex-wrap items-center gap-2.5">
+                <a
+                  href={stationConfig.socialLinks.facebook}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/50 hover:bg-blue-600/10 text-white text-xs font-bold transition-all"
+                  aria-label="Follow Rukiga FM on Facebook"
+                >
+                  <Facebook size={15} className="text-blue-500 shrink-0" />
+                  <span>Facebook</span>
+                </a>
+                <a
+                  href={stationConfig.socialLinks.x}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 hover:border-white/40 hover:bg-white/10 text-white text-xs font-bold transition-all"
+                  aria-label="Follow Rukiga FM on X"
+                >
+                  {/* Modern X logo SVG */}
+                  <svg className="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                  <span>Follow on X</span>
+                </a>
+                <a
+                  href={stationConfig.socialLinks.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-8 h-8 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-text-secondary hover:text-pink-400 hover:bg-white/10 transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram size={15} />
+                </a>
+                <a
+                  href={stationConfig.socialLinks.youtube}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-8 h-8 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-text-secondary hover:text-brand-red hover:bg-white/10 transition-colors"
+                  aria-label="YouTube"
+                >
+                  <Youtube size={15} />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -193,7 +203,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-text-muted">
           <p>
-            © {new Date().getFullYear()} <span className="text-white font-semibold">RUKIGA FM — EKICUNCU</span>. All rights reserved. Eiraka ryaitu, omwoyo gwaitu.
+            © {new Date().getFullYear()} <span className="text-white font-semibold">RUKIGA FM — EKICUNCU</span>. All rights reserved.
           </p>
           <div className="flex items-center gap-5">
             <a

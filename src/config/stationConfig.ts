@@ -3,7 +3,7 @@ import { StationConfig, Programme, Presenter, NewsArticle, PodcastEpisode, Poll 
 export const stationConfig: StationConfig = {
   stationName: 'RUKIGA FM',
   brandIdentity: 'EKICUNCU',
-  slogan: 'RUKIGA FM — EKICUNCU. Eiraka ryaitu, omwoyo gwaitu.',
+  slogan: 'RUKIGA FM — EKICUNCU. Your Voice, Your Community.',
   tagline: 'EKICUNCU — YOUR VOICE, YOUR COMMUNITY.',
   description:
     'Your destination for music, news, conversations, entertainment, sports, and the stories that bring our communities together. Tune in and be part of the experience.',
@@ -28,7 +28,8 @@ export const stationConfig: StationConfig = {
   },
   socialLinks: {
     facebook: 'https://facebook.com/rukigafm',
-    twitter: 'https://twitter.com/rukigafm',
+    twitter: 'https://x.com/rukigafm',
+    x: 'https://x.com/rukigafm',
     instagram: 'https://instagram.com/rukigafm',
     tiktok: 'https://tiktok.com/@rukigafm',
     youtube: 'https://youtube.com/@rukigafm',

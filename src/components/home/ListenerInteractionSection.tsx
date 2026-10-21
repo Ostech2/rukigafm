@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Vote, Music, Phone, Mail, MessageSquare, Check, Sparkles, Share2 } from 'lucide-react';
+import { Vote, Music, Phone, Mail, MessageSquare, Check, Sparkles, Share2, Facebook } from 'lucide-react';
 import { initialPoll, stationConfig } from '../../config/stationConfig';
 import { Poll } from '../../types';
 import { SongRequestModal } from '../common/SongRequestModal';
@@ -228,6 +228,38 @@ export const ListenerInteractionSection: React.FC = () => {
                 </div>
                 <span className="text-white font-semibold truncate max-w-[160px]">{stationConfig.contact.email}</span>
               </div>
+            </div>
+          </div>
+
+          {/* Follow Us On Facebook and X */}
+          <div className="rounded-2xl p-5 bg-background-card border border-white/10 space-y-3">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-bold text-white uppercase tracking-wider block">
+                Follow Us On Facebook & X
+              </span>
+              <span className="text-[11px] font-bold text-brand-gold">@rukigafm</span>
+            </div>
+            <div className="grid grid-cols-2 gap-2.5">
+              <a
+                href={stationConfig.socialLinks.facebook}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-blue-600/15 hover:bg-blue-600 border border-blue-500/30 text-white text-xs font-bold transition-all group"
+              >
+                <Facebook size={16} className="text-blue-400 group-hover:text-white" />
+                <span>Facebook</span>
+              </a>
+              <a
+                href={stationConfig.socialLinks.x}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-white/10 hover:bg-white hover:text-black border border-white/20 text-white text-xs font-bold transition-all"
+              >
+                <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                <span>Follow on X</span>
+              </a>
             </div>
           </div>
 
