@@ -92,11 +92,8 @@ export const ProgrammesShowcase: React.FC = () => {
               <div className="pt-3 border-t border-white/10 flex items-center justify-between text-xs text-text-muted">
                 <div className="flex items-center gap-2">
                   <User size={14} className="text-brand-red shrink-0" />
-                  <span className="truncate">{prog.presenter}</span>
+                  <span className="truncate font-medium text-white/90">{prog.presenter}</span>
                 </div>
-                <span className="text-[10px] bg-white/5 px-2 py-0.5 rounded text-white/50">
-                  Editable
-                </span>
               </div>
 
               {/* Action Buttons */}

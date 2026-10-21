@@ -20,14 +20,6 @@ export const PresentersPage: React.FC = () => {
         </p>
       </div>
 
-      {/* Honest placeholder notice */}
-      <div className="p-4 rounded-xl bg-white/[0.03] border border-white/5 flex items-center justify-between text-xs text-text-muted">
-        <span>Presenter profiles below are configured as operational placeholders. Official biographical profiles and photography will be updated in the central settings upon broadcasting launch.</span>
-        <span className="text-[11px] font-bold uppercase tracking-wider bg-white/10 px-2.5 py-1 rounded text-white">
-          Editable Config
-        </span>
-      </div>
-
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {presentersData.map((presenter) => (

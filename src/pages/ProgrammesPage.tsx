@@ -50,11 +50,11 @@ export const ProgrammesPage: React.FC = () => {
         ))}
       </div>
 
-      {/* Schedule Disclaimer */}
+      {/* Schedule Bar */}
       <div className="p-4 rounded-xl bg-white/[0.03] border border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-text-muted">
         <div className="flex items-center gap-2">
           <Info size={16} className="text-brand-gold shrink-0" />
-          <span>Broadcast times and presenter assignments are editable placeholders until the station confirms the final operational schedule.</span>
+          <span>Official weekday broadcast schedule and on-air lineup for RUKIGA FM — EKICUNCU.</span>
         </div>
         <span className="font-semibold text-brand-gold uppercase tracking-wider text-[11px] shrink-0">
           Showing {filteredProgrammes.length} Weekday Shows

@@ -67,13 +67,8 @@ export const PresentersSection: React.FC = () => {
                   </p>
                 </div>
 
-                {/* Social links & Placeholder notice */}
-                <div className="pt-2 border-t border-white/10 flex items-center justify-between">
-                  <div className="flex items-center gap-2 text-text-muted">
-                    <span className="text-[10px] bg-white/5 px-1.5 py-0.5 rounded text-white/40">
-                      Editable Roster
-                    </span>
-                  </div>
+                {/* Social links */}
+                <div className="pt-2 border-t border-white/10 flex items-center justify-end">
                   <div className="flex items-center gap-1.5">
                     <a
                       href={presenter.socials.twitter}
