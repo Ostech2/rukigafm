@@ -112,9 +112,11 @@ export const AdvertisingPage: React.FC = () => {
           <div className="space-y-3 text-xs text-text-muted">
             <div className="p-4 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
               <span className="font-bold text-white uppercase text-[11px] block">Official Marketing Desk</span>
-              <span>Phone: {stationConfig.contact.phone}</span>
+              <span>Studio: <a href="tel:+256754789562" className="text-brand-gold hover:underline font-semibold">+256 754 789 562</a> / <a href="tel:+256770607189" className="text-brand-gold hover:underline font-semibold">+256 770 607 189</a></span>
               <br />
-              <span>Email: info@rukigafm.co.ug</span>
+              <span>Reception: <a href="tel:+256393243287" className="text-brand-gold hover:underline font-semibold">+256 393 243 287</a></span>
+              <br />
+              <span>Email: info@rukigafm.com</span>
             </div>
             <div className="p-4 rounded-xl bg-brand-gold/10 border border-brand-gold/20 text-brand-gold">
               * Local SME discounts are available for agricultural cooperatives, schools, clinics, and district traders.

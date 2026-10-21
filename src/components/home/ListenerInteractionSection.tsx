@@ -178,12 +178,39 @@ export const ListenerInteractionSection: React.FC = () => {
             </h4>
             
             <div className="space-y-3 text-xs">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-xl bg-white/[0.03] border border-white/5 gap-2">
+                <div className="flex items-center gap-2.5">
+                  <Phone size={15} className="text-brand-gold shrink-0" />
+                  <span className="text-text-secondary">On-Air Studio Lines:</span>
+                </div>
+                <div className="flex flex-wrap items-center gap-1.5">
+                  <a
+                    href={`tel:${stationConfig.contact.studioLine1.replace(/\s+/g, '')}`}
+                    className="px-2 py-0.5 rounded bg-white/5 hover:bg-brand-gold hover:text-black text-white font-bold transition-colors"
+                  >
+                    {stationConfig.contact.studioLine1}
+                  </a>
+                  <span className="text-text-muted">•</span>
+                  <a
+                    href={`tel:${stationConfig.contact.studioLine2.replace(/\s+/g, '')}`}
+                    className="px-2 py-0.5 rounded bg-white/5 hover:bg-brand-gold hover:text-black text-white font-bold transition-colors"
+                  >
+                    {stationConfig.contact.studioLine2}
+                  </a>
+                </div>
+              </div>
+
               <div className="flex items-center justify-between p-3 rounded-xl bg-white/[0.03] border border-white/5">
                 <div className="flex items-center gap-2.5">
-                  <Phone size={15} className="text-brand-gold" />
-                  <span className="text-text-secondary">On-Air Call In:</span>
+                  <Phone size={15} className="text-brand-red shrink-0" />
+                  <span className="text-text-secondary">Reception & Office:</span>
                 </div>
-                <span className="text-white font-semibold">{stationConfig.contact.phone}</span>
+                <a
+                  href={`tel:${stationConfig.contact.receptionLine.replace(/\s+/g, '')}`}
+                  className="px-2 py-0.5 rounded bg-white/5 hover:bg-brand-red text-white font-bold transition-colors"
+                >
+                  {stationConfig.contact.receptionLine}
+                </a>
               </div>
 
               <div className="flex items-center justify-between p-3 rounded-xl bg-white/[0.03] border border-white/5">

@@ -82,6 +82,10 @@ export interface StationConfig {
   isLiveBroadcasting: boolean;
   contact: {
     phone: string;
+    studioLine1: string;
+    studioLine2: string;
+    receptionLine: string;
+    phones: string[];
     whatsappNumber: string;
     whatsappFormatted: string;
     email: string;

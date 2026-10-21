@@ -77,8 +77,39 @@ export const ContactPage: React.FC = () => {
                   <Phone size={20} />
                 </div>
                 <div>
-                  <span className="text-xs font-bold text-brand-gold uppercase block">Call-In Hotline</span>
-                  <span className="text-text-secondary">{stationConfig.contact.phone}</span>
+                  <span className="text-xs font-bold text-brand-gold uppercase block">On-Air Call-In Studio Lines</span>
+                  <div className="flex flex-wrap items-center gap-2 mt-1">
+                    <a
+                      href={`tel:${stationConfig.contact.studioLine1.replace(/\s+/g, '')}`}
+                      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 hover:bg-brand-gold hover:text-black text-white font-bold text-xs transition-colors border border-white/10"
+                    >
+                      <Phone size={12} className="text-brand-red" />
+                      <span>{stationConfig.contact.studioLine1}</span>
+                    </a>
+                    <a
+                      href={`tel:${stationConfig.contact.studioLine2.replace(/\s+/g, '')}`}
+                      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 hover:bg-brand-gold hover:text-black text-white font-bold text-xs transition-colors border border-white/10"
+                    >
+                      <Phone size={12} className="text-brand-gold" />
+                      <span>{stationConfig.contact.studioLine2}</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3.5">
+                <div className="p-2.5 rounded-xl bg-white/10 text-white shrink-0 mt-0.5">
+                  <Phone size={20} className="text-brand-gold" />
+                </div>
+                <div>
+                  <span className="text-xs font-bold text-brand-gold uppercase block">Station Reception & Office</span>
+                  <a
+                    href={`tel:${stationConfig.contact.receptionLine.replace(/\s+/g, '')}`}
+                    className="inline-flex items-center gap-1.5 px-3 py-1 mt-1 rounded-lg bg-white/5 hover:bg-brand-gold hover:text-black text-white font-bold text-xs transition-colors border border-white/10"
+                  >
+                    <Phone size={12} className="text-brand-red" />
+                    <span>{stationConfig.contact.receptionLine}</span>
+                  </a>
                 </div>
               </div>
 

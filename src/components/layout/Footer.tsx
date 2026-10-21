@@ -149,7 +149,24 @@ export const Footer: React.FC = () => {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone size={16} className="text-brand-gold shrink-0" />
-                <span>{stationConfig.contact.phone}</span>
+                <div className="flex items-center gap-1.5 flex-wrap">
+                  <a href={`tel:${stationConfig.contact.studioLine1.replace(/\s+/g, '')}`} className="hover:text-brand-gold transition-colors font-semibold">
+                    {stationConfig.contact.studioLine1}
+                  </a>
+                  <span>/</span>
+                  <a href={`tel:${stationConfig.contact.studioLine2.replace(/\s+/g, '')}`} className="hover:text-brand-gold transition-colors font-semibold">
+                    {stationConfig.contact.studioLine2}
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <Phone size={16} className="text-white/60 shrink-0" />
+                <div className="flex items-center gap-1.5">
+                  <span className="text-text-muted">Reception:</span>
+                  <a href={`tel:${stationConfig.contact.receptionLine.replace(/\s+/g, '')}`} className="hover:text-brand-gold transition-colors font-semibold text-white">
+                    {stationConfig.contact.receptionLine}
+                  </a>
+                </div>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail size={16} className="text-brand-red shrink-0" />
