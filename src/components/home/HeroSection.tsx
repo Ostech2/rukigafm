@@ -62,7 +62,7 @@ export const HeroSection: React.FC = () => {
         <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white uppercase leading-[1.08] mb-4">
           <span className="block drop-shadow-sm">RUKIGA <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-red-500">FM</span></span>
           <span className="block text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider text-brand-gold mt-2">
-            EKICUNCU — YOUR VOICE, YOUR COMMUNITY.
+            EKICUNCU
           </span>
         </h1>
 

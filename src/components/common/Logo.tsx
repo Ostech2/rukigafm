@@ -63,11 +63,6 @@ export const Logo: React.FC<LogoProps> = ({ size = 'md', showSlogan = false, ima
             <span className={`font-bold text-white/90 tracking-wide ${subTextSize}`}>
               "Ekicuncu"
             </span>
-            {showSlogan && (
-              <span className="hidden md:inline-block text-[11px] text-text-muted italic">
-                • Your Voice, Your Community
-              </span>
-            )}
           </div>
         </div>
       )}
