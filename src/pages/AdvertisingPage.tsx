@@ -141,7 +141,7 @@ export const AdvertisingPage: React.FC = () => {
           <div className="space-y-3 text-xs text-text-muted">
             <div className="p-4 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
               <span className="font-bold text-white uppercase text-[11px] block">Official Marketing Desk</span>
-              <span>Studio / WhatsApp: <a href="tel:+256755622290" className="text-brand-gold hover:underline font-semibold">+256 755 622 290</a> / <a href="tel:+256754789562" className="text-brand-gold hover:underline font-semibold">+256 754 789 562</a></span>
+              <span>Studio / WhatsApp: <a href="tel:+256755622290" className="text-brand-gold hover:underline font-semibold">+256 755 622 290</a> / <a href="tel:+256770607189" className="text-brand-gold hover:underline font-semibold">+256 770 607 189</a></span>
               <br />
               <span>Reception: <a href="tel:+256393243287" className="text-brand-gold hover:underline font-semibold">+256 393 243 287</a></span>
               <br />

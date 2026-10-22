@@ -124,11 +124,12 @@ export const stationConfig: StationConfig = {
 ### 2. Updating Contact Numbers & WhatsApp
 ```typescript
 contact: {
-  phone: '0754789562 / 0770607189',
-  studioLine1: '0754789562',
-  studioLine2: '0770607189',
-  whatsappNumber: '256754789562',
-  whatsappFormatted: '+256 754 789 562 / +256 770 607 189',
+  phone: '0755622290 / 0770607189',
+  studioLine1: '+256 755 622 290',
+  studioLine2: '+256 770 607 189',
+  receptionLine: '+256 393 243 287',
+  whatsappNumber: '256755622290',
+  whatsappFormatted: '+256 755 622 290',
   email: 'info@rukigafm.com',
   studioAddress: 'Muhanga Town Council, Rukiga District, along Mbarara–Kabale Road, Western Uganda',
   region: 'Muhanga Town Council, Rukiga District, Kigezi, Western Uganda',
