@@ -93,7 +93,7 @@ export const officialProgrammes: Programme[] = [
     fullDescription:
       'SPORTS MAGAZINE is the definitive home of sporting thrill on RUKIGA FM. Bringing match highlights, player transfers, tactical breakdowns, and grassroots sports tournaments directly to your ears. We shine a spotlight on budding local athletes from Kigezi and Western Uganda while delivering punchy updates on continental and global sporting spectacles.',
     theme: 'Sports discussions, match updates, and sporting stories',
-    image: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/sports-magazine.png',
     days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
     timeSlot: '02:00 PM – 04:00 PM',
     presenter: 'NIWAMANYA BALAAM',
@@ -263,7 +263,7 @@ export const officialProgrammes: Programme[] = [
     fullDescription:
       'TUMUHIMBISE brings energetic gospel praise and worship straight to your airwaves every Sunday evening. Hosted with warmth and spiritual passion by Prossy Designer, the show unites listeners in joyous celebration, Christian testimonies, prayer lines, and uplifting gospel hits.',
     theme: 'Gospel praise, celebration, testimonies and Sunday revival',
-    image: 'https://images.unsplash.com/photo-1510525009512-ab72371eb113?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/tumuhimbise.png',
     days: ['Sunday'],
     timeSlot: '04:00 PM – 07:00 PM',
     presenter: 'PROSSY TUMWEBAZE (PROSSY DESIGNER)',
@@ -301,7 +301,7 @@ export const presentersData: Presenter[] = [
     name: 'NIWAMANYA BALAAM',
     role: 'Sports Anchor — MC BALAAM AMERICANA',
     show: 'SPORTS MAGAZINE',
-    image: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600&auto=format&fit=crop',
+    image: '/images/sports-magazine.png',
     bio: 'MC BALAAM AMERICANA doubles up as the voice of SPORTS MAGAZINE, delivering match analyses, grassroots athletics coverage, and high-energy sporting debates that keep fans across Western Uganda glued to their radios.',
     socials: { twitter: '#', facebook: '#', instagram: '#' },
     isPlaceholder: false,
@@ -486,7 +486,7 @@ export const podcastsData: PodcastEpisode[] = [
     date: 'October 10, 2026',
     duration: '34:40',
     audioUrl: 'https://cdn.freesound.org/previews/316/316844_4939433-lq.mp3',
-    artwork: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600&auto=format&fit=crop',
+    artwork: '/images/sports-magazine.png',
     description:
       'A deep dive into player form, tactical matchups, and scouting reports ahead of the upcoming regional knockout stages.',
   },
