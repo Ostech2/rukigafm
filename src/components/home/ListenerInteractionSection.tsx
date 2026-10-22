@@ -218,7 +218,17 @@ export const ListenerInteractionSection: React.FC = () => {
                   <MessageSquare size={15} className="text-emerald-400" />
                   <span className="text-text-secondary">WhatsApp:</span>
                 </div>
-                <span className="text-white font-semibold">{stationConfig.contact.whatsappFormatted}</span>
+                <a
+                  href={`https://wa.me/${stationConfig.contact.whatsappNumber}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-emerald-400 font-bold transition-colors inline-flex items-center gap-1.5"
+                >
+                  <span>{stationConfig.contact.whatsappFormatted}</span>
+                  <span className="text-[10px] bg-emerald-500/20 text-emerald-400 px-1.5 py-0.5 rounded font-bold">
+                    Chat
+                  </span>
+                </a>
               </div>
 
               <div className="flex items-center justify-between p-3 rounded-xl bg-white/[0.03] border border-white/5">

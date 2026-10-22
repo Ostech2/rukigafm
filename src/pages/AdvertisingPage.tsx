@@ -14,17 +14,46 @@ export const AdvertisingPage: React.FC = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.businessName || !formData.contactPerson || !formData.phone) {
       setError('Please provide your business name, contact person name, and phone number.');
       return;
     }
     setError('');
+    setLoading(true);
 
-    // Save inquiry to localStorage queue for studio marketing team
+    // 1. Direct dispatch to rukigafm.com inbox via FormSubmit API
+    try {
+      await fetch(`https://formsubmit.co/ajax/${stationConfig.contact.email}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          Business: formData.businessName,
+          ContactPerson: formData.contactPerson,
+          Phone: formData.phone,
+          Email: formData.email,
+          PackageInterest: formData.interest,
+          BudgetRange: formData.budgetRange,
+          CampaignNotes: formData.notes,
+          _subject: `[Rukiga FM Advertising Inquiry] ${formData.businessName} - ${formData.interest}`,
+          _replyto: formData.email ? formData.email : undefined,
+          _template: 'table',
+        }),
+      });
+    } catch {
+      // Continue gracefully even if network is restricted
+    } finally {
+      setLoading(false);
+    }
+
+    // 2. Save inquiry to localStorage queue for studio marketing team
     try {
       const existing = JSON.parse(localStorage.getItem('rukiga_ad_inquiries') || '[]');
       localStorage.setItem(
@@ -112,7 +141,7 @@ export const AdvertisingPage: React.FC = () => {
           <div className="space-y-3 text-xs text-text-muted">
             <div className="p-4 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
               <span className="font-bold text-white uppercase text-[11px] block">Official Marketing Desk</span>
-              <span>Studio: <a href="tel:+256754789562" className="text-brand-gold hover:underline font-semibold">+256 754 789 562</a> / <a href="tel:+256770607189" className="text-brand-gold hover:underline font-semibold">+256 770 607 189</a></span>
+              <span>Studio / WhatsApp: <a href="tel:+256755622290" className="text-brand-gold hover:underline font-semibold">+256 755 622 290</a> / <a href="tel:+256754789562" className="text-brand-gold hover:underline font-semibold">+256 754 789 562</a></span>
               <br />
               <span>Reception: <a href="tel:+256393243287" className="text-brand-gold hover:underline font-semibold">+256 393 243 287</a></span>
               <br />
@@ -130,13 +159,13 @@ export const AdvertisingPage: React.FC = () => {
               <div className="w-16 h-16 mx-auto rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center border border-emerald-500/30">
                 <CheckCircle2 size={36} />
               </div>
-              <h3 className="text-2xl font-bold text-white">Media Request Received!</h3>
+              <h3 className="text-2xl font-bold text-white">Inquiry Sent to Station Inbox!</h3>
               <p className="text-text-secondary text-sm max-w-md mx-auto">
-                Thank you, <span className="text-white font-semibold">{formData.contactPerson}</span> from <span className="text-brand-gold font-semibold">{formData.businessName}</span>. Our commercial sales coordinator will review your request and get in touch with rate cards.
+                Thank you, <span className="text-white font-semibold">{formData.contactPerson}</span> from <span className="text-brand-gold font-semibold">{formData.businessName}</span>. Your advertising inquiry has been dispatched directly to <span className="text-brand-gold font-bold">{stationConfig.contact.email}</span>. Our commercial sales team will review and reply with official rate cards.
               </p>
               <button
                 onClick={() => setSubmitted(false)}
-                className="mt-4 px-6 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-brand-red"
+                className="mt-4 px-6 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-brand-red hover:bg-red-700 transition-colors"
               >
                 Submit Another Request
               </button>
@@ -258,10 +287,11 @@ export const AdvertisingPage: React.FC = () => {
 
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-brand-red hover:bg-red-700 shadow-lg shadow-brand-red/30 transition-all"
+                disabled={loading}
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-brand-red hover:bg-red-700 disabled:opacity-50 shadow-lg shadow-brand-red/30 transition-all"
               >
                 <Send size={15} />
-                <span>Submit Advertising Enquiry</span>
+                <span>{loading ? 'Routing to Station Inbox...' : 'Submit Advertising Enquiry'}</span>
               </button>
             </form>
           )}

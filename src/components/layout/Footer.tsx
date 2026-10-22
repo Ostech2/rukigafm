@@ -184,7 +184,14 @@ export const Footer: React.FC = () => {
               </div>
               <div className="flex items-center gap-2.5">
                 <MessageSquare size={16} className="text-emerald-400 shrink-0" />
-                <span>WhatsApp: {stationConfig.contact.whatsappFormatted}</span>
+                <a
+                  href={`https://wa.me/${stationConfig.contact.whatsappNumber}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-emerald-400 transition-colors"
+                >
+                  WhatsApp: {stationConfig.contact.whatsappFormatted}
+                </a>
               </div>
             </div>
 
