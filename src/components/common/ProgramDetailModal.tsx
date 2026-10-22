@@ -62,7 +62,11 @@ export const ProgramDetailModal: React.FC<ProgramDetailModalProps> = ({ programm
               <Calendar size={16} className="text-brand-red shrink-0" />
               <div>
                 <span className="text-text-muted block">Days:</span>
-                <span className="text-white font-semibold">Monday – Friday</span>
+                <span className="text-white font-semibold">
+                  {programme.days.length === 5 && programme.days.includes('Monday') && programme.days.includes('Friday')
+                    ? 'Monday – Friday'
+                    : programme.days.join(' & ')}
+                </span>
               </div>
             </div>
 

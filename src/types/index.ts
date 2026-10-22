@@ -11,7 +11,7 @@ export interface Programme {
   timeSlot: string; // e.g. "06:00 AM - 10:00 AM (Confirmed / Placeholder)"
   presenter: string;
   isConfirmed: boolean;
-  category: 'Morning' | 'Midday' | 'Sports' | 'Evening' | 'Drive';
+  category: 'Morning' | 'Midday' | 'Sports' | 'Evening' | 'Drive' | 'Weekend';
 }
 
 export interface Presenter {

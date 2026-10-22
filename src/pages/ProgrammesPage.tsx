@@ -7,12 +7,12 @@ import { ProgramDetailModal } from '../components/common/ProgramDetailModal';
 
 export const ProgrammesPage: React.FC = () => {
   const { playLiveStream } = usePlayer();
-  const [selectedDay, setSelectedDay] = useState<string>('All Weekdays');
+  const [selectedDay, setSelectedDay] = useState<string>('All Days');
   const [selectedProgramme, setSelectedProgramme] = useState<Programme | null>(null);
 
-  const weekdays = ['All Weekdays', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+  const daysList = ['All Days', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-  const filteredProgrammes = selectedDay === 'All Weekdays'
+  const filteredProgrammes = selectedDay === 'All Days'
     ? officialProgrammes
     : officialProgrammes.filter((prog) => prog.days.includes(selectedDay));
 
@@ -23,19 +23,19 @@ export const ProgrammesPage: React.FC = () => {
       <div className="text-center max-w-3xl mx-auto space-y-4">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-red/15 text-brand-red border border-brand-red/30 text-xs font-bold uppercase tracking-wider">
           <Calendar size={14} />
-          <span>Monday to Friday Schedule</span>
+          <span>Monday to Sunday Broadcasting Schedule</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-white uppercase tracking-tight">
           OFFICIAL <span className="text-brand-gold">PROGRAMMES TIMETABLE</span>
         </h1>
         <p className="text-text-secondary text-base sm:text-lg leading-relaxed">
-          Tune in from dawn to midnight every Monday through Friday for music, community empowerment, sports action, and evening storytelling.
+          Tune in 7 days a week from dawn to midnight for music, community empowerment, sports action, parliamentary debate, weekend jams, and soulful cultural storytelling.
         </p>
       </div>
 
-      {/* Weekday Filter Tabs */}
+      {/* Day Filter Tabs */}
       <div className="flex items-center justify-center flex-wrap gap-2 pt-2">
-        {weekdays.map((day) => (
+        {daysList.map((day) => (
           <button
             key={day}
             onClick={() => setSelectedDay(day)}
@@ -54,10 +54,10 @@ export const ProgrammesPage: React.FC = () => {
       <div className="p-4 rounded-xl bg-white/[0.03] border border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-text-muted">
         <div className="flex items-center gap-2">
           <Info size={16} className="text-brand-gold shrink-0" />
-          <span>Official weekday broadcast schedule and on-air lineup for RUKIGA FM — EKICUNCU.</span>
+          <span>Official 7-day broadcast schedule and on-air lineup for RUKIGA FM — EKICUNCU.</span>
         </div>
         <span className="font-semibold text-brand-gold uppercase tracking-wider text-[11px] shrink-0">
-          Showing {filteredProgrammes.length} Weekday Shows
+          Showing {filteredProgrammes.length} Shows
         </span>
       </div>
 
@@ -94,7 +94,7 @@ export const ProgrammesPage: React.FC = () => {
             <div className="md:col-span-5 space-y-3">
               <div className="flex items-center gap-2">
                 <span className="text-xs font-bold text-brand-gold tracking-widest uppercase">
-                  Show #{index + 1} • Mon – Fri
+                  Show #{index + 1} • {prog.days.length === 5 && prog.days.includes('Monday') && prog.days.includes('Friday') ? 'Mon – Fri' : prog.days.join(', ')}
                 </span>
               </div>
 

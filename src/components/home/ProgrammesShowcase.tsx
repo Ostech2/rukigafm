@@ -32,12 +32,12 @@ export const ProgrammesShowcase: React.FC = () => {
           to="/programmes"
           className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-brand-gold font-bold text-sm tracking-wide border border-white/10 hover:border-brand-gold/40 transition-all self-start md:self-auto"
         >
-          <span>View Monday – Friday Timetable</span>
+          <span>View Full Weekly Timetable</span>
           <ArrowRight size={16} />
         </Link>
       </div>
 
-      {/* 5 Official Programmes Cards Grid */}
+      {/* Official Programmes Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {officialProgrammes.map((prog, index) => (
           <div
@@ -58,7 +58,9 @@ export const ProgrammesShowcase: React.FC = () => {
               {/* Day Badge */}
               <div className="absolute top-4 left-4 flex items-center gap-2">
                 <span className="px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-black/60 backdrop-blur-md text-white border border-white/10">
-                  Mon – Fri
+                  {prog.days.length === 5 && prog.days.includes('Monday') && prog.days.includes('Friday')
+                    ? 'Mon – Fri'
+                    : prog.days.join(' & ')}
                 </span>
                 <span className="px-2.5 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-brand-gold text-black">
                   #{index + 1}
